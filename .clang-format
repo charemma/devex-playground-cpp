@@ -1,0 +1,14 @@
+---
+# Use space for indentation instead of tab.
+UseTab: Never
+
+# Indentation handling.
+IndentWidth: 4
+AccessModifierOffset: -4
+IndentCaseLabels: false
+NamespaceIndentation: All
+ColumnLimit: 120
+
+# empty line handling
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false

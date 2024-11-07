@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": ["Configure"],
+      "command": "cmake --build --preset=default --parallel $(($(nproc)-1))",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "clear": true,
+        "showReuseMessage": false
+      }
+    },
+    {
+      "label": "Configure",
+      "type": "shell",
+      "hide": true,
+      "command": "test -e build/CMakeCache.txt || cmake --preset=default",
+      "problemMatcher": [],
+      "presentation": {
+        "echo": false
+      }
+    }
+  ]
+}
+
