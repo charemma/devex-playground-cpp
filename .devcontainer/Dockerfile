@@ -13,13 +13,8 @@ RUN apt-get update && apt-get install -y \
     ninja-build \
     && rm -rf /var/lib/apt/lists/*
 
-# setup user
-ENV USERNAME=vscode
-ENV USER_UID=1001
-ENV USER_GID=1001
-
 # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME
+RUN groupadd --gid 1001 vscode \
+    && useradd -s /bin/bash --uid 1001 --gid 1001 -m vscode
 
-USER $USERNAME
+USER vscode
