@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  vscode-ide:
+    image: devex/playground/cpp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    tmpfs:
+      - /var/volatile
+      - /var/log/
+      - /run/user/0:rw
+    volumes:
+      - ../..:/workspaces:cached
+      - ccache-volume:/ccache
+      - pipcache-volume:/pipcache
+      - /dev:/dev
