@@ -1,6 +1,6 @@
 {
   "name": "devex-playground-cpp",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerFile": "Dockerfile",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "remoteUser": "vscode",
   "remoteEnv": {
