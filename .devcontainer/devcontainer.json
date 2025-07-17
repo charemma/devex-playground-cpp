@@ -14,5 +14,8 @@
         "llvm-vs-code-extensions.vscode-clangd"
       ]
     }
+  },
+  "features": {
+    "ghcr.io/charemma/devcontainer-features/vscode-auto-extensions:latest": {}
   }
 }
